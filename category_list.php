@@ -34,8 +34,7 @@ $statement->closeCursor();
 	<td> 
 		<form action='delete_category.php' method = 'post'>
 			<input type = 'hidden' name = "category_id"
-				value = "<?php echo
-				$category['categoryID'];?">/>
+				value = "<?php echo $category['categoryID'];?">/>
 			<input type = 'submit' value = 'delete'/>
 		</form>
 	</td>	
@@ -50,28 +49,7 @@ $statement->closeCursor();
          <form action="add_category.php" method="post"
             <input type = 'text' name = 'category' >
 	    <input type = 'submit' value = 'add new category' >
-	    id="add_product_form">
-
-            <label>Category:</label>
-            <select name="category_id">
-            <?php foreach ($categories as $category) : ?>
-                <option value="<?php echo $category['categoryID']; ?>">
-                    <?php echo $category['categoryName']; ?>
-                </option>
-            <?php endforeach; ?>
-            </select><br>
-
-            <label>Code:</label>
-            <input type="text" name="code"><br>
-
-            <label>Name:</label>
-            <input type="text" name="name"><br>
-
-            <label>List Price:</label>
-            <input type="text" name="price"><br>
-
-            <label>&nbsp;</label>
-            <input type="submit" value="Add Category"><br>
+	    
         </form>
     
     <br>
