@@ -48,8 +48,8 @@ $statement->closeCursor();
     <h2>Add Category</h2>
     <!-- add code for the form here -->
          <form action="add_category.php" method="post"
-            <input type = 'text' name = 'category' />
-	    <input type = 'submit' value = 'add new category' />
+            <input type = 'text' name = 'category' >
+	    <input type = 'submit' value = 'add new category' >
 	    id="add_product_form">
 
             <label>Category:</label>
