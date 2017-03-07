@@ -1,16 +1,16 @@
 <?php 
-    $category_id = filter_input(INPUT_POST, 'category_is', FILTER_VALIDATE_INT);
-    if ($category_id == null ||$category_id == false)
-    {
-            error = "invalid category id.";
-            include ('error.phhp');
+    $name = filter_input(INPUT_POST, 'name'):
+   
+    if ($name == null){     {
+            error = "invalid name";
+            include ('error.php');
     }
     else {
         require_once('database.php');
-        $query = 'delete from categories_guitar1 where categoryID = :category_id';
+        $query = 'insert into categories_guitar1 (categoryName) values (:category_name)';
         $statement = $db->prepare ($query);
-        $statement->bindValue(":categoryID", $category_id);
-        $statement->execute()
+        $statement->bindValue(':category_name', $name);
+        $statement->execute();
         $statement->closeCursor();
         
         include('category_list.php');
