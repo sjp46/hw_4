@@ -9,8 +9,8 @@
         require_once('database.php');
         $query = 'delete from categories_guitar1 where categoryID = :category_id';
         $statement = $db->prepare ($query);
-        $statement->bindValue(":categoryID", $category_id);
-        $statement->execute()
+        $statement->bindValue(':categoryID', $category_id);
+        $statement->execute();
         $statement->closeCursor();
         
         include('category_list.php');
